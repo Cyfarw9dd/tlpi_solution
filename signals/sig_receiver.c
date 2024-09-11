@@ -15,6 +15,10 @@
 static int sigCnt[NSIG];                /* Counts deliveries of each signal */
 static volatile sig_atomic_t gotSigint = 0;
                                         /* Set nonzero if SIGINT is delivered */
+
+struct sigaction new_handler;
+
+
 static void
 handler(int sig)
 {
@@ -28,8 +32,12 @@ main(int argc, char *argv[])
 {
     int n, numSecs;
     sigset_t pendingMask, blockingMask, emptyMask;
+    memset(&new_handler, 0, sizeof(new_handler));
 
     printf("%s: PID is %ld\n", argv[0], (long) getpid());
+
+    // 改变信号处置
+    new_handler.sa_handler = handler;
 
     /* Here we use the simpler signal() API to establish a signal handler,
        but for the reasons described in Section 22.7 of TLPI, sigaction()
@@ -37,7 +45,7 @@ main(int argc, char *argv[])
 
     // NSIG为当前信号数量
     for (n = 1; n < NSIG; n++)          /* Same handler for all signals */
-        (void) signal(n, handler);      /* Ignore errors */
+        (void) sigaction(n, &new_handler, NULL);      /* Ignore errors */
 
     /* If a sleep time was specified, temporarily block all signals,
        sleep (while another process sends us signals), and then
