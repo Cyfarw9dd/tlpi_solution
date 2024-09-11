@@ -35,6 +35,7 @@ main(int argc, char *argv[])
        but for the reasons described in Section 22.7 of TLPI, sigaction()
        is the (strongly) preferred API for this task. */
 
+    // NSIG为当前信号数量
     for (n = 1; n < NSIG; n++)          /* Same handler for all signals */
         (void) signal(n, handler);      /* Ignore errors */
 
@@ -44,7 +45,7 @@ main(int argc, char *argv[])
 
     if (argc > 1) {
         numSecs = getInt(argv[1], GN_GT_0, NULL);
-
+        
         sigfillset(&blockingMask);
         if (sigprocmask(SIG_SETMASK, &blockingMask, NULL) == -1)
             errExit("sigprocmask");

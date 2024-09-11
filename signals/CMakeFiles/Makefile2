@@ -63,7 +63,8 @@ CMAKE_BINARY_DIR = /root/CodeField_C/tlpi/signals
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/signals.dir/all
+all: CMakeFiles/sig_receiver.dir/all
+all: CMakeFiles/sig_sender.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +72,61 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/signals.dir/clean
+clean: CMakeFiles/sig_receiver.dir/clean
+clean: CMakeFiles/sig_sender.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/signals.dir
+# Target rules for target CMakeFiles/sig_receiver.dir
 
 # All Build rule for target.
-CMakeFiles/signals.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/CodeField_C/tlpi/signals/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target signals"
-.PHONY : CMakeFiles/signals.dir/all
+CMakeFiles/sig_receiver.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sig_receiver.dir/build.make CMakeFiles/sig_receiver.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sig_receiver.dir/build.make CMakeFiles/sig_receiver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/CodeField_C/tlpi/signals/CMakeFiles --progress-num=1,2,3,4 "Built target sig_receiver"
+.PHONY : CMakeFiles/sig_receiver.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/signals.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/signals/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/signals.dir/all
+CMakeFiles/sig_receiver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/signals/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sig_receiver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/signals/CMakeFiles 0
-.PHONY : CMakeFiles/signals.dir/rule
+.PHONY : CMakeFiles/sig_receiver.dir/rule
 
 # Convenience name for target.
-signals: CMakeFiles/signals.dir/rule
-.PHONY : signals
+sig_receiver: CMakeFiles/sig_receiver.dir/rule
+.PHONY : sig_receiver
 
 # clean rule for target.
-CMakeFiles/signals.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/clean
-.PHONY : CMakeFiles/signals.dir/clean
+CMakeFiles/sig_receiver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sig_receiver.dir/build.make CMakeFiles/sig_receiver.dir/clean
+.PHONY : CMakeFiles/sig_receiver.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sig_sender.dir
+
+# All Build rule for target.
+CMakeFiles/sig_sender.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sig_sender.dir/build.make CMakeFiles/sig_sender.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sig_sender.dir/build.make CMakeFiles/sig_sender.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/CodeField_C/tlpi/signals/CMakeFiles --progress-num=5,6,7,8 "Built target sig_sender"
+.PHONY : CMakeFiles/sig_sender.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sig_sender.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/signals/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sig_sender.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/signals/CMakeFiles 0
+.PHONY : CMakeFiles/sig_sender.dir/rule
+
+# Convenience name for target.
+sig_sender: CMakeFiles/sig_sender.dir/rule
+.PHONY : sig_sender
+
+# clean rule for target.
+CMakeFiles/sig_sender.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sig_sender.dir/build.make CMakeFiles/sig_sender.dir/clean
+.PHONY : CMakeFiles/sig_sender.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

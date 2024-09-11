@@ -1,32 +1,23 @@
-cmake_minimum_required(VERSION 3.10)
-project(signals)
-
-# 指定 C 标准
-set(CMAKE_C_STANDARD 11)
-
-# 包含根目录下的所有文件
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../lib)
-
-# 添加 lib 目录下的所有源文件
-file(GLOB LIB_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/../lib/*.c")
-
-# 添加 signals 目录下的所有源文件
-file(GLOB SIGNALS_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.c")
-
-# 合并所有源文件
-set(SOURCE_FILES ${LIB_SOURCES} ${SIGNALS_SOURCES})
-
-# 添加可执行文件
-add_executable(signals ${SOURCE_FILES})
-
-# 指定可执行文件的输出目录
-set_target_properties(signals PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}"
+# 添加signal_functions库
+add_library(signal_functions STATIC
+    signal_functions.c
 )
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")
+target_include_directories(signal_functions PUBLIC 
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/lib  # 添加这一行
+)
 
-# 链接数学库
-target_link_libraries(signals m)
+# 创建sig_sender可执行文件
+add_executable(sig_sender sig_sender.c)
+target_link_libraries(sig_sender PRIVATE tlpi_lib signal_functions)
 
+# 创建sig_receiver可执行文件
+add_executable(sig_receiver sig_receiver.c)
+target_link_libraries(sig_receiver PRIVATE tlpi_lib signal_functions)
+
+# 设置输出目录
+set_target_properties(sig_sender sig_receiver
+    PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)

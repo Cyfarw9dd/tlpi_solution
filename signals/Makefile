@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/CodeField_C/tlpi/signals
+CMAKE_SOURCE_DIR = /root/CodeField_C/tlpi
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/CodeField_C/tlpi/signals
+CMAKE_BINARY_DIR = /root/CodeField_C/tlpi
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/signals/CMakeFiles /root/CodeField_C/tlpi/signals//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/signals/CMakeFiles 0
+	cd /root/CodeField_C/tlpi && $(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/CMakeFiles /root/CodeField_C/tlpi/signals//CMakeFiles/progress.marks
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/CodeField_C/tlpi/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,110 +103,67 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/CodeField_C/tlpi && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named signals
+# Convenience name for target.
+signals/CMakeFiles/signal_functions.dir/rule:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/CMakeFiles/signal_functions.dir/rule
+.PHONY : signals/CMakeFiles/signal_functions.dir/rule
 
-# Build rule for target.
-signals: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals
-.PHONY : signals
+# Convenience name for target.
+signal_functions: signals/CMakeFiles/signal_functions.dir/rule
+.PHONY : signal_functions
 
 # fast build rule for target.
-signals/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/build
-.PHONY : signals/fast
+signal_functions/fast:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/signal_functions.dir/build.make signals/CMakeFiles/signal_functions.dir/build
+.PHONY : signal_functions/fast
 
-root/CodeField_C/tlpi/lib/alt_functions.o: root/CodeField_C/tlpi/lib/alt_functions.c.o
-.PHONY : root/CodeField_C/tlpi/lib/alt_functions.o
+# Convenience name for target.
+signals/CMakeFiles/sig_sender.dir/rule:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/CMakeFiles/sig_sender.dir/rule
+.PHONY : signals/CMakeFiles/sig_sender.dir/rule
 
-# target to build an object file
-root/CodeField_C/tlpi/lib/alt_functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/alt_functions.c.o
-.PHONY : root/CodeField_C/tlpi/lib/alt_functions.c.o
+# Convenience name for target.
+sig_sender: signals/CMakeFiles/sig_sender.dir/rule
+.PHONY : sig_sender
 
-root/CodeField_C/tlpi/lib/alt_functions.i: root/CodeField_C/tlpi/lib/alt_functions.c.i
-.PHONY : root/CodeField_C/tlpi/lib/alt_functions.i
+# fast build rule for target.
+sig_sender/fast:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_sender.dir/build.make signals/CMakeFiles/sig_sender.dir/build
+.PHONY : sig_sender/fast
 
-# target to preprocess a source file
-root/CodeField_C/tlpi/lib/alt_functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/alt_functions.c.i
-.PHONY : root/CodeField_C/tlpi/lib/alt_functions.c.i
+# Convenience name for target.
+signals/CMakeFiles/sig_receiver.dir/rule:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/CMakeFiles/sig_receiver.dir/rule
+.PHONY : signals/CMakeFiles/sig_receiver.dir/rule
 
-root/CodeField_C/tlpi/lib/alt_functions.s: root/CodeField_C/tlpi/lib/alt_functions.c.s
-.PHONY : root/CodeField_C/tlpi/lib/alt_functions.s
+# Convenience name for target.
+sig_receiver: signals/CMakeFiles/sig_receiver.dir/rule
+.PHONY : sig_receiver
 
-# target to generate assembly for a file
-root/CodeField_C/tlpi/lib/alt_functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/alt_functions.c.s
-.PHONY : root/CodeField_C/tlpi/lib/alt_functions.c.s
-
-root/CodeField_C/tlpi/lib/error_functions.o: root/CodeField_C/tlpi/lib/error_functions.c.o
-.PHONY : root/CodeField_C/tlpi/lib/error_functions.o
-
-# target to build an object file
-root/CodeField_C/tlpi/lib/error_functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/error_functions.c.o
-.PHONY : root/CodeField_C/tlpi/lib/error_functions.c.o
-
-root/CodeField_C/tlpi/lib/error_functions.i: root/CodeField_C/tlpi/lib/error_functions.c.i
-.PHONY : root/CodeField_C/tlpi/lib/error_functions.i
-
-# target to preprocess a source file
-root/CodeField_C/tlpi/lib/error_functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/error_functions.c.i
-.PHONY : root/CodeField_C/tlpi/lib/error_functions.c.i
-
-root/CodeField_C/tlpi/lib/error_functions.s: root/CodeField_C/tlpi/lib/error_functions.c.s
-.PHONY : root/CodeField_C/tlpi/lib/error_functions.s
-
-# target to generate assembly for a file
-root/CodeField_C/tlpi/lib/error_functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/error_functions.c.s
-.PHONY : root/CodeField_C/tlpi/lib/error_functions.c.s
-
-root/CodeField_C/tlpi/lib/get_num.o: root/CodeField_C/tlpi/lib/get_num.c.o
-.PHONY : root/CodeField_C/tlpi/lib/get_num.o
-
-# target to build an object file
-root/CodeField_C/tlpi/lib/get_num.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/get_num.c.o
-.PHONY : root/CodeField_C/tlpi/lib/get_num.c.o
-
-root/CodeField_C/tlpi/lib/get_num.i: root/CodeField_C/tlpi/lib/get_num.c.i
-.PHONY : root/CodeField_C/tlpi/lib/get_num.i
-
-# target to preprocess a source file
-root/CodeField_C/tlpi/lib/get_num.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/get_num.c.i
-.PHONY : root/CodeField_C/tlpi/lib/get_num.c.i
-
-root/CodeField_C/tlpi/lib/get_num.s: root/CodeField_C/tlpi/lib/get_num.c.s
-.PHONY : root/CodeField_C/tlpi/lib/get_num.s
-
-# target to generate assembly for a file
-root/CodeField_C/tlpi/lib/get_num.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/get_num.c.s
-.PHONY : root/CodeField_C/tlpi/lib/get_num.c.s
+# fast build rule for target.
+sig_receiver/fast:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_receiver.dir/build.make signals/CMakeFiles/sig_receiver.dir/build
+.PHONY : sig_receiver/fast
 
 sig_receiver.o: sig_receiver.c.o
 .PHONY : sig_receiver.o
 
 # target to build an object file
 sig_receiver.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/sig_receiver.c.o
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_receiver.dir/build.make signals/CMakeFiles/sig_receiver.dir/sig_receiver.c.o
 .PHONY : sig_receiver.c.o
 
 sig_receiver.i: sig_receiver.c.i
@@ -214,7 +171,7 @@ sig_receiver.i: sig_receiver.c.i
 
 # target to preprocess a source file
 sig_receiver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/sig_receiver.c.i
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_receiver.dir/build.make signals/CMakeFiles/sig_receiver.dir/sig_receiver.c.i
 .PHONY : sig_receiver.c.i
 
 sig_receiver.s: sig_receiver.c.s
@@ -222,15 +179,39 @@ sig_receiver.s: sig_receiver.c.s
 
 # target to generate assembly for a file
 sig_receiver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/sig_receiver.c.s
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_receiver.dir/build.make signals/CMakeFiles/sig_receiver.dir/sig_receiver.c.s
 .PHONY : sig_receiver.c.s
+
+sig_sender.o: sig_sender.c.o
+.PHONY : sig_sender.o
+
+# target to build an object file
+sig_sender.c.o:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_sender.dir/build.make signals/CMakeFiles/sig_sender.dir/sig_sender.c.o
+.PHONY : sig_sender.c.o
+
+sig_sender.i: sig_sender.c.i
+.PHONY : sig_sender.i
+
+# target to preprocess a source file
+sig_sender.c.i:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_sender.dir/build.make signals/CMakeFiles/sig_sender.dir/sig_sender.c.i
+.PHONY : sig_sender.c.i
+
+sig_sender.s: sig_sender.c.s
+.PHONY : sig_sender.s
+
+# target to generate assembly for a file
+sig_sender.c.s:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_sender.dir/build.make signals/CMakeFiles/sig_sender.dir/sig_sender.c.s
+.PHONY : sig_sender.c.s
 
 signal_functions.o: signal_functions.c.o
 .PHONY : signal_functions.o
 
 # target to build an object file
 signal_functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/signal_functions.c.o
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/signal_functions.dir/build.make signals/CMakeFiles/signal_functions.dir/signal_functions.c.o
 .PHONY : signal_functions.c.o
 
 signal_functions.i: signal_functions.c.i
@@ -238,7 +219,7 @@ signal_functions.i: signal_functions.c.i
 
 # target to preprocess a source file
 signal_functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/signal_functions.c.i
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/signal_functions.dir/build.make signals/CMakeFiles/signal_functions.dir/signal_functions.c.i
 .PHONY : signal_functions.c.i
 
 signal_functions.s: signal_functions.c.s
@@ -246,7 +227,7 @@ signal_functions.s: signal_functions.c.s
 
 # target to generate assembly for a file
 signal_functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/signals.dir/build.make CMakeFiles/signals.dir/signal_functions.c.s
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/signal_functions.dir/build.make signals/CMakeFiles/signal_functions.dir/signal_functions.c.s
 .PHONY : signal_functions.c.s
 
 # Help Target
@@ -257,19 +238,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... signals"
-	@echo "... root/CodeField_C/tlpi/lib/alt_functions.o"
-	@echo "... root/CodeField_C/tlpi/lib/alt_functions.i"
-	@echo "... root/CodeField_C/tlpi/lib/alt_functions.s"
-	@echo "... root/CodeField_C/tlpi/lib/error_functions.o"
-	@echo "... root/CodeField_C/tlpi/lib/error_functions.i"
-	@echo "... root/CodeField_C/tlpi/lib/error_functions.s"
-	@echo "... root/CodeField_C/tlpi/lib/get_num.o"
-	@echo "... root/CodeField_C/tlpi/lib/get_num.i"
-	@echo "... root/CodeField_C/tlpi/lib/get_num.s"
+	@echo "... sig_receiver"
+	@echo "... sig_sender"
+	@echo "... signal_functions"
 	@echo "... sig_receiver.o"
 	@echo "... sig_receiver.i"
 	@echo "... sig_receiver.s"
+	@echo "... sig_sender.o"
+	@echo "... sig_sender.i"
+	@echo "... sig_sender.s"
 	@echo "... signal_functions.o"
 	@echo "... signal_functions.i"
 	@echo "... signal_functions.s"
@@ -284,6 +261,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/CodeField_C/tlpi && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
