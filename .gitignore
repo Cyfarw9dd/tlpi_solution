@@ -1,4 +1,7 @@
+# 忽略构建目录
 build/
+
+# 忽略CMake生成的文件
 CMakeFiles/
 lib/CMakeFiles/
 signals/CMakeFiles/

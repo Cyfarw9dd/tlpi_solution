@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[])
 {
-
+    // 检查输入参数个数
     if (argc != 2) 
     {
         fprintf(stderr, "Usage: %s <mode>\n", argv[0]);
@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     int terminate_status = 1;
     char buffer[BUFFER_SIZE];     
 
+    // 根据输入参数决定进程是否忽视SIGINT信号
     if (argc > 1)  
     {
         switch (mode)
@@ -38,13 +39,13 @@ int main(int argc, char *argv[])
 
     do
     {
-        if (NULL == fgets(buffer, sizeof(buffer), stdin))
+        if (NULL == fgets(buffer, sizeof(buffer), stdin))  // 从标注输入中读取字符串 
             break;
-        if (NULL != strstr(buffer, "kill"))
+        if (NULL != strstr(buffer, "kill"))  // 查找字符串     
             terminate_status = 0;
     } while (terminate_status); 
 
-    abort();
+    abort();  // 终止程序
     return 0;
 
 }
