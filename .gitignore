@@ -1,9 +1,23 @@
 build/
+CMakeFiles/
 lib/CMakeFiles/
 signals/CMakeFiles/
 
+# CMake构建相关文件
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
 # 忽略编译产生的文件
 *.o
+*.obj
 *.so
 *.a
+*.lib
+*.dll
 *.exe
+
+# 编译过程中的调试信息文件和临时文件
+*.pdb
+*.tmp
+*.log
