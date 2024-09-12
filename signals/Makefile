@@ -158,6 +158,44 @@ sig_receiver/fast:
 	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_receiver.dir/build.make signals/CMakeFiles/sig_receiver.dir/build
 .PHONY : sig_receiver/fast
 
+# Convenience name for target.
+signals/CMakeFiles/sig_ignore.dir/rule:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/CMakeFiles/sig_ignore.dir/rule
+.PHONY : signals/CMakeFiles/sig_ignore.dir/rule
+
+# Convenience name for target.
+sig_ignore: signals/CMakeFiles/sig_ignore.dir/rule
+.PHONY : sig_ignore
+
+# fast build rule for target.
+sig_ignore/fast:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_ignore.dir/build.make signals/CMakeFiles/sig_ignore.dir/build
+.PHONY : sig_ignore/fast
+
+sig_ignore.o: sig_ignore.c.o
+.PHONY : sig_ignore.o
+
+# target to build an object file
+sig_ignore.c.o:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_ignore.dir/build.make signals/CMakeFiles/sig_ignore.dir/sig_ignore.c.o
+.PHONY : sig_ignore.c.o
+
+sig_ignore.i: sig_ignore.c.i
+.PHONY : sig_ignore.i
+
+# target to preprocess a source file
+sig_ignore.c.i:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_ignore.dir/build.make signals/CMakeFiles/sig_ignore.dir/sig_ignore.c.i
+.PHONY : sig_ignore.c.i
+
+sig_ignore.s: sig_ignore.c.s
+.PHONY : sig_ignore.s
+
+# target to generate assembly for a file
+sig_ignore.c.s:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_ignore.dir/build.make signals/CMakeFiles/sig_ignore.dir/sig_ignore.c.s
+.PHONY : sig_ignore.c.s
+
 sig_receiver.o: sig_receiver.c.o
 .PHONY : sig_receiver.o
 
@@ -238,9 +276,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sig_ignore"
 	@echo "... sig_receiver"
 	@echo "... sig_sender"
 	@echo "... signal_functions"
+	@echo "... sig_ignore.o"
+	@echo "... sig_ignore.i"
+	@echo "... sig_ignore.s"
 	@echo "... sig_receiver.o"
 	@echo "... sig_receiver.i"
 	@echo "... sig_receiver.s"

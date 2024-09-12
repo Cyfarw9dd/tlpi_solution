@@ -168,6 +168,19 @@ sig_receiver/fast:
 	$(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_receiver.dir/build.make signals/CMakeFiles/sig_receiver.dir/build
 .PHONY : sig_receiver/fast
 
+#=============================================================================
+# Target rules for targets named sig_ignore
+
+# Build rule for target.
+sig_ignore: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sig_ignore
+.PHONY : sig_ignore
+
+# fast build rule for target.
+sig_ignore/fast:
+	$(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_ignore.dir/build.make signals/CMakeFiles/sig_ignore.dir/build
+.PHONY : sig_ignore/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -176,6 +189,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sig_ignore"
 	@echo "... sig_receiver"
 	@echo "... sig_sender"
 	@echo "... signal_functions"

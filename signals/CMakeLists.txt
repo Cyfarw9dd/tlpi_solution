@@ -16,8 +16,12 @@ target_link_libraries(sig_sender PRIVATE tlpi_lib signal_functions)
 add_executable(sig_receiver sig_receiver.c)
 target_link_libraries(sig_receiver PRIVATE tlpi_lib signal_functions)
 
+# 创建sig_receiver可执行文件
+add_executable(sig_ignore sig_ignore.c)
+target_link_libraries(sig_ignore PRIVATE tlpi_lib signal_functions)
+
 # 设置输出目录
-set_target_properties(sig_sender sig_receiver
+set_target_properties(sig_sender sig_receiver sig_ignore
     PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
 )
