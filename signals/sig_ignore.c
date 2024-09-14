@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
     do
     {
-        if (NULL == fgets(buffer, sizeof(buffer), stdin))  // 从标注输入中读取字符串 
+        if (NULL == fgets(buffer, sizeof(buffer), stdin))  // 从标准输入中读取字符串 
             break;
         if (NULL != strstr(buffer, "kill"))  // 查找字符串     
             terminate_status = 0;

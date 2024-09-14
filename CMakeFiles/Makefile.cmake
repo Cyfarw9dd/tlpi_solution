@@ -48,4 +48,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "signals/CMakeFiles/sig_sender.dir/DependInfo.cmake"
   "signals/CMakeFiles/sig_receiver.dir/DependInfo.cmake"
   "signals/CMakeFiles/sig_ignore.dir/DependInfo.cmake"
+  "signals/CMakeFiles/my_abort.dir/DependInfo.cmake"
   )

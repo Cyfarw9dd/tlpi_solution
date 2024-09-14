@@ -172,6 +172,44 @@ sig_ignore/fast:
 	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_ignore.dir/build.make signals/CMakeFiles/sig_ignore.dir/build
 .PHONY : sig_ignore/fast
 
+# Convenience name for target.
+signals/CMakeFiles/my_abort.dir/rule:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 signals/CMakeFiles/my_abort.dir/rule
+.PHONY : signals/CMakeFiles/my_abort.dir/rule
+
+# Convenience name for target.
+my_abort: signals/CMakeFiles/my_abort.dir/rule
+.PHONY : my_abort
+
+# fast build rule for target.
+my_abort/fast:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/my_abort.dir/build.make signals/CMakeFiles/my_abort.dir/build
+.PHONY : my_abort/fast
+
+my_abort.o: my_abort.c.o
+.PHONY : my_abort.o
+
+# target to build an object file
+my_abort.c.o:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/my_abort.dir/build.make signals/CMakeFiles/my_abort.dir/my_abort.c.o
+.PHONY : my_abort.c.o
+
+my_abort.i: my_abort.c.i
+.PHONY : my_abort.i
+
+# target to preprocess a source file
+my_abort.c.i:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/my_abort.dir/build.make signals/CMakeFiles/my_abort.dir/my_abort.c.i
+.PHONY : my_abort.c.i
+
+my_abort.s: my_abort.c.s
+.PHONY : my_abort.s
+
+# target to generate assembly for a file
+my_abort.c.s:
+	cd /root/CodeField_C/tlpi && $(MAKE) $(MAKESILENT) -f signals/CMakeFiles/my_abort.dir/build.make signals/CMakeFiles/my_abort.dir/my_abort.c.s
+.PHONY : my_abort.c.s
+
 sig_ignore.o: sig_ignore.c.o
 .PHONY : sig_ignore.o
 
@@ -276,10 +314,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... my_abort"
 	@echo "... sig_ignore"
 	@echo "... sig_receiver"
 	@echo "... sig_sender"
 	@echo "... signal_functions"
+	@echo "... my_abort.o"
+	@echo "... my_abort.i"
+	@echo "... my_abort.s"
 	@echo "... sig_ignore.o"
 	@echo "... sig_ignore.i"
 	@echo "... sig_ignore.s"
