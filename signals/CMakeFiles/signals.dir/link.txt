@@ -1,1 +1,0 @@
-/usr/bin/cc  -g CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/alt_functions.c.o CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/error_functions.c.o CMakeFiles/signals.dir/root/CodeField_C/tlpi/lib/get_num.c.o CMakeFiles/signals.dir/sig_receiver.c.o CMakeFiles/signals.dir/signal_functions.c.o -o signals  -lm 

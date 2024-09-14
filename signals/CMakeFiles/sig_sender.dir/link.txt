@@ -1,1 +1,0 @@
-/usr/bin/cc  -Wall -Wextra -pedantic CMakeFiles/sig_sender.dir/sig_sender.c.o -o ../bin/sig_sender  ../lib/libtlpi_lib.a libsignal_functions.a 

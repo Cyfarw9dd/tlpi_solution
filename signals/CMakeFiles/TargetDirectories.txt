@@ -1,4 +1,0 @@
-/root/CodeField_C/tlpi/signals/CMakeFiles/sig_receiver.dir
-/root/CodeField_C/tlpi/signals/CMakeFiles/sig_sender.dir
-/root/CodeField_C/tlpi/signals/CMakeFiles/edit_cache.dir
-/root/CodeField_C/tlpi/signals/CMakeFiles/rebuild_cache.dir
