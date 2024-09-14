@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtlpi_lib.a CMakeFiles/tlpi_lib.dir/alt_functions.c.o CMakeFiles/tlpi_lib.dir/error_functions.c.o CMakeFiles/tlpi_lib.dir/get_num.c.o
-/usr/bin/ranlib libtlpi_lib.a

@@ -1,11 +1,6 @@
 # 忽略构建目录
 build/
 
-# CMake构建相关文件
-CMakeCache.txt
-Makefile
-cmake_install.cmake
-
 # 忽略编译产生的文件
 *.o
 *.obj
