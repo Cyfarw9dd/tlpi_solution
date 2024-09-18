@@ -194,6 +194,19 @@ my_abort/fast:
 	$(MAKE) $(MAKESILENT) -f signals/CMakeFiles/my_abort.dir/build.make signals/CMakeFiles/my_abort.dir/build
 .PHONY : my_abort/fast
 
+#=============================================================================
+# Target rules for targets named sig_continue
+
+# Build rule for target.
+sig_continue: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sig_continue
+.PHONY : sig_continue
+
+# fast build rule for target.
+sig_continue/fast:
+	$(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_continue.dir/build.make signals/CMakeFiles/sig_continue.dir/build
+.PHONY : sig_continue/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -203,6 +216,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... my_abort"
+	@echo "... sig_continue"
 	@echo "... sig_ignore"
 	@echo "... sig_receiver"
 	@echo "... sig_sender"

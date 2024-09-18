@@ -1,6 +1,16 @@
 # 忽略构建目录
 build/
 
+# 忽略CMake生成的文件
+CMakeFiles/
+lib/CMakeFiles/
+signals/CMakeFiles/
+
+# CMake构建相关文件
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
 # 忽略编译产生的文件
 *.o
 *.obj
