@@ -207,6 +207,19 @@ sig_continue/fast:
 	$(MAKE) $(MAKESILENT) -f signals/CMakeFiles/sig_continue.dir/build.make signals/CMakeFiles/sig_continue.dir/build
 .PHONY : sig_continue/fast
 
+#=============================================================================
+# Target rules for targets named rtsignal_sequence
+
+# Build rule for target.
+rtsignal_sequence: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rtsignal_sequence
+.PHONY : rtsignal_sequence
+
+# fast build rule for target.
+rtsignal_sequence/fast:
+	$(MAKE) $(MAKESILENT) -f signals/CMakeFiles/rtsignal_sequence.dir/build.make signals/CMakeFiles/rtsignal_sequence.dir/build
+.PHONY : rtsignal_sequence/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,6 +229,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... my_abort"
+	@echo "... rtsignal_sequence"
 	@echo "... sig_continue"
 	@echo "... sig_ignore"
 	@echo "... sig_receiver"

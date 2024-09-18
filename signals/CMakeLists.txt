@@ -28,8 +28,12 @@ target_link_libraries(my_abort PRIVATE tlpi_lib signal_functions)
 add_executable(sig_continue sig_continue.c)
 target_link_libraries(sig_continue PRIVATE tlpi_lib signal_functions)
 
+# 创建rtsignal_sequence可执行文件
+add_executable(rtsignal_sequence rtsignal_sequence.c)
+target_link_libraries(rtsignal_sequence PRIVATE tlpi_lib signal_functions)
+
 # 设置输出目录
-set_target_properties(sig_sender sig_receiver sig_ignore my_abort sig_continue
+set_target_properties(sig_sender sig_receiver sig_ignore my_abort sig_continue rtsignal_sequence
     PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/signal"
 )

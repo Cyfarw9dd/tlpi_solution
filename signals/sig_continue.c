@@ -36,5 +36,5 @@ int main(int argc, char *argv[])
     usleep(1000);  // 延迟 1 毫秒
 
     return 0;
-    
+
 }
