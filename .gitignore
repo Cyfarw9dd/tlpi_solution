@@ -7,6 +7,9 @@ lib/CMakeFiles/
 signals/CMakeFiles/
 
 # 忽略CMake构建相关文件
+CMakeCache.txt
+Makefile
+cmake_install.cmake
 
 # 忽略编译产生的文件
 *.o
