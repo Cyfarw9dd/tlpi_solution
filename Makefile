@@ -220,6 +220,58 @@ rtsignal_sequence/fast:
 	$(MAKE) $(MAKESILENT) -f signals/CMakeFiles/rtsignal_sequence.dir/build.make signals/CMakeFiles/rtsignal_sequence.dir/build
 .PHONY : rtsignal_sequence/fast
 
+#=============================================================================
+# Target rules for targets named time
+
+# Build rule for target.
+time: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 time
+.PHONY : time
+
+# fast build rule for target.
+time/fast:
+	$(MAKE) $(MAKESILENT) -f time/CMakeFiles/time.dir/build.make time/CMakeFiles/time.dir/build
+.PHONY : time/fast
+
+#=============================================================================
+# Target rules for targets named timer
+
+# Build rule for target.
+timer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 timer
+.PHONY : timer
+
+# fast build rule for target.
+timer/fast:
+	$(MAKE) $(MAKESILENT) -f timer/CMakeFiles/timer.dir/build.make timer/CMakeFiles/timer.dir/build
+.PHONY : timer/fast
+
+#=============================================================================
+# Target rules for targets named ptmr_sigev_signal
+
+# Build rule for target.
+ptmr_sigev_signal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ptmr_sigev_signal
+.PHONY : ptmr_sigev_signal
+
+# fast build rule for target.
+ptmr_sigev_signal/fast:
+	$(MAKE) $(MAKESILENT) -f timer/CMakeFiles/ptmr_sigev_signal.dir/build.make timer/CMakeFiles/ptmr_sigev_signal.dir/build
+.PHONY : ptmr_sigev_signal/fast
+
+#=============================================================================
+# Target rules for targets named t_nanosleep
+
+# Build rule for target.
+t_nanosleep: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 t_nanosleep
+.PHONY : t_nanosleep
+
+# fast build rule for target.
+t_nanosleep/fast:
+	$(MAKE) $(MAKESILENT) -f timer/CMakeFiles/t_nanosleep.dir/build.make timer/CMakeFiles/t_nanosleep.dir/build
+.PHONY : t_nanosleep/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -229,12 +281,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... my_abort"
+	@echo "... ptmr_sigev_signal"
 	@echo "... rtsignal_sequence"
 	@echo "... sig_continue"
 	@echo "... sig_ignore"
 	@echo "... sig_receiver"
 	@echo "... sig_sender"
 	@echo "... signal_functions"
+	@echo "... t_nanosleep"
+	@echo "... time"
+	@echo "... timer"
 	@echo "... tlpi_lib"
 .PHONY : help
 

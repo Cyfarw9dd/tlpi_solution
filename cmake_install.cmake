@@ -46,6 +46,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/root/CodeField_C/tlpi/lib/cmake_install.cmake")
   include("/root/CodeField_C/tlpi/signals/cmake_install.cmake")
+  include("/root/CodeField_C/tlpi/time/cmake_install.cmake")
+  include("/root/CodeField_C/tlpi/timer/cmake_install.cmake")
 
 endif()
 

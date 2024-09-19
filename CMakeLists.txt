@@ -15,3 +15,5 @@ endif()
 # 添加子目录
 add_subdirectory(lib)
 add_subdirectory(signals)
+add_subdirectory(time)
+add_subdirectory(timer)
