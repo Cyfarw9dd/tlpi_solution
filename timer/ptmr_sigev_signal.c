@@ -22,6 +22,8 @@
 #include "tlpi_hdr.h"
 
 #define TIMER_SIG SIGRTMAX              /* Our timer notification signal */
+#define UNUSED(x) (void)(x)
+
 static void
 handler(int sig, siginfo_t *si, void *uc)
 {
@@ -35,6 +37,7 @@ handler(int sig, siginfo_t *si, void *uc)
     printf("[%s] Got signal %d\n", currTime("%T"), sig);
     printf("    *sival_ptr         = %ld\n", (long) *tidptr);
     printf("    timer_getoverrun() = %d\n", timer_getoverrun(*tidptr));
+    UNUSED(uc);
 }
 int
 main(int argc, char *argv[])

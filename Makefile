@@ -272,6 +272,19 @@ t_nanosleep/fast:
 	$(MAKE) $(MAKESILENT) -f timer/CMakeFiles/t_nanosleep.dir/build.make timer/CMakeFiles/t_nanosleep.dir/build
 .PHONY : t_nanosleep/fast
 
+#=============================================================================
+# Target rules for targets named my_alarm
+
+# Build rule for target.
+my_alarm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_alarm
+.PHONY : my_alarm
+
+# fast build rule for target.
+my_alarm/fast:
+	$(MAKE) $(MAKESILENT) -f timer/CMakeFiles/my_alarm.dir/build.make timer/CMakeFiles/my_alarm.dir/build
+.PHONY : my_alarm/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -281,6 +294,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... my_abort"
+	@echo "... my_alarm"
 	@echo "... ptmr_sigev_signal"
 	@echo "... rtsignal_sequence"
 	@echo "... sig_continue"
