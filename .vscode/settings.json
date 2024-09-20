@@ -3,6 +3,7 @@
         "signal_functions.h": "c",
         "tlpi_hdr.h": "c",
         "signal.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "error_functions.h": "c"
     }
 }
