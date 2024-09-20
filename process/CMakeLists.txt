@@ -26,7 +26,12 @@ target_link_libraries(vfork_fd_test PRIVATE tlpi_lib)
 add_executable(fork_sig_sync fork_sig_sync.c)
 target_link_libraries(fork_sig_sync PRIVATE tlpi_lib time)
 
-set_target_properties(t_fork fork_file_sharing footprint t_vfork vfork_fd_test fork_whos_on_first fork_sig_sync
+# 创建process_test可执行文件
+add_executable(process_test process_test.c)
+target_link_libraries(process_test PRIVATE tlpi_lib time)
+
+
+set_target_properties(t_fork fork_file_sharing footprint t_vfork vfork_fd_test fork_whos_on_first fork_sig_sync process_test
     PROPERTIES 
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/process"
 )
