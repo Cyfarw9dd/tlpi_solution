@@ -2,6 +2,7 @@
     "files.associations": {
         "signal_functions.h": "c",
         "tlpi_hdr.h": "c",
-        "signal.h": "c"
+        "signal.h": "c",
+        "time.h": "c"
     }
 }
