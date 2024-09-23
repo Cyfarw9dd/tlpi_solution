@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     // 如果指定了输出文件，那么则打开文件
     if (argc > 1)
     {
+        // 打开输出文件，并且检查是否为追加模式
         fd_output = open(argv[1], O_WRONLY | O_CREAT | (append_flag ? O_APPEND : O_TRUNC), 0644);
         if (-1 == fd_output)
         {
@@ -46,6 +47,7 @@ int main(int argc, char *argv[])
         }
     }
 
+    // 从标准输入中读取
     while ((bytes_read = read(fd_input, temp_buffer, READ_SIZE)) > 0)
     {
         temp_buffer[bytes_read] = '\0';
