@@ -4,6 +4,8 @@
         "tlpi_hdr.h": "c",
         "signal.h": "c",
         "time.h": "c",
-        "error_functions.h": "c"
+        "error_functions.h": "c",
+        "unistd.h": "c",
+        "socket.h": "c"
     }
 }
